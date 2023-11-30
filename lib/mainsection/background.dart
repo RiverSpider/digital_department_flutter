@@ -7,8 +7,8 @@ class Background extends StatelessWidget {
   Widget build(BuildContext context) {
     return
       Container(
-        width: 10000,
-        height: 10000,
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
         decoration: const BoxDecoration(
           color: Colors.white,
           boxShadow: [

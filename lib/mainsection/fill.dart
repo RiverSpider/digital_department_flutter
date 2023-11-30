@@ -9,8 +9,6 @@ class Fill extends StatelessWidget {
     return Column(
       children: [
         Container(
-          width: 49,
-          height: 35,
           clipBehavior: Clip.antiAlias,
           decoration: ShapeDecoration(
             color: Colors.black.withOpacity(0.07999999821186066),

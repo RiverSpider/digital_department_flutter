@@ -41,7 +41,6 @@ class Cards extends StatelessWidget {
             children: [
               const SizedBox(width: 216, height: 14),
               SizedBox(
-                width: double.infinity,
                 height: 40,
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
@@ -49,7 +48,6 @@ class Cards extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     SizedBox(
-                      height: double.infinity,
                       child: Row(
                         mainAxisSize: MainAxisSize.min,
                         mainAxisAlignment: MainAxisAlignment.start,
@@ -91,22 +89,27 @@ class Cards extends StatelessWidget {
                                               ),
                                             ),
                                             Positioned(
-                                              left: 8,
-                                              top: 8.07,
                                               child: SizedBox(
-                                                width: 20.62,
-                                                height: 19.89,
+                                                width: 50,
+                                                height: 50,
                                                 child: Stack(
                                                   children: [
                                                     Positioned(
-                                                      left: 1.50,
-                                                      top: 2.93,
                                                       child: SizedBox(
-                                                        width: 7,
-                                                        height: 7,
+                                                        width: 200,
+                                                        height: 200,
                                                         child: Stack(children: [
-                                                          Image(
-                                                            image: AssetImage(image),
+                                                          Positioned(
+                                                            child: Container(
+                                                              width: 50,
+                                                              height: 50,
+                                                              decoration: BoxDecoration(
+                                                                image: DecorationImage(
+                                                                  image: AssetImage(image),
+                                                                  fit: BoxFit.fill,
+                                                                ),
+                                                              ),
+                                                            ),
                                                           ),
                                                             ]),
                                                       ),
@@ -136,7 +139,6 @@ class Cards extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 SizedBox(
-                                  width: double.infinity,
                                   child: Text(
                                     title,
                                     style: const TextStyle(
@@ -171,7 +173,6 @@ class Cards extends StatelessWidget {
               ),
               const SizedBox(width: 216, height: 22),
               SizedBox(
-                width: double.infinity,
                 height: 38,
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
@@ -179,7 +180,6 @@ class Cards extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     SizedBox(
-                      height: double.infinity,
                       child: Row(
                         mainAxisSize: MainAxisSize.min,
                         mainAxisAlignment: MainAxisAlignment.start,
@@ -195,7 +195,6 @@ class Cards extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 SizedBox(
-                                  width: double.infinity,
                                   height: 18,
                                   child: Text(
                                     description,
@@ -210,7 +209,6 @@ class Cards extends StatelessWidget {
                                 ),
                                 const SizedBox(width: 184, height: 2),
                                 SizedBox(
-                                  width: double.infinity,
                                   height: 18,
                                   child: Text(
                                     subdiscription,

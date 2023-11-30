@@ -40,7 +40,6 @@ class NavigationButtons extends StatelessWidget {
                     children: [
                       const SizedBox(width: 187.50, height: 17),
                       Container(
-                        width: double.infinity,
                         height: 20,
                         clipBehavior: Clip.antiAlias,
                         decoration: const BoxDecoration(),
@@ -50,7 +49,6 @@ class NavigationButtons extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             SizedBox(
-                              width: double.infinity,
                               height: 20,
                               child: Text(
                                 'Профиль',
@@ -60,7 +58,6 @@ class NavigationButtons extends StatelessWidget {
                                   fontSize: 16,
                                   fontFamily: 'SF Pro Text',
                                   fontWeight: FontWeight.w500,
-                                  height: 0.08,
                                   letterSpacing: -0.40,
                                 ),
                               ),
@@ -86,7 +83,6 @@ class NavigationButtons extends StatelessWidget {
                     children: [
                       const SizedBox(width: 187.50, height: 17),
                       Container(
-                        width: double.infinity,
                         height: 20,
                         clipBehavior: Clip.antiAlias,
                         decoration: const BoxDecoration(),
@@ -96,7 +92,6 @@ class NavigationButtons extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             SizedBox(
-                              width: double.infinity,
                               height: 20,
                               child: Text(
                                 'Настройки',
@@ -106,7 +101,6 @@ class NavigationButtons extends StatelessWidget {
                                   fontSize: 16,
                                   fontFamily: 'SF Pro Text',
                                   fontWeight: FontWeight.w500,
-                                  height: 0.08,
                                   letterSpacing: -0.40,
                                 ),
                               ),

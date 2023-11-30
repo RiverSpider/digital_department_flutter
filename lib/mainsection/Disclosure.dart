@@ -34,7 +34,7 @@ class Disclosure extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const SizedBox(width: 16, height: 40),
+                          const SizedBox(width: 30, height: 40),
                           Container(
                             clipBehavior: Clip.antiAlias,
                             decoration: const BoxDecoration(),
@@ -43,7 +43,7 @@ class Disclosure extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
-                                const SizedBox(width: 36, height: 2),
+                                const SizedBox(width: 26, height: 2),
                                 SizedBox(
                                   width: 36,
                                   height: 36,
@@ -64,7 +64,7 @@ class Disclosure extends StatelessWidget {
                                     ],
                                   ),
                                 ),
-                                const SizedBox(width: 36, height: 2),
+                                const SizedBox(width: 20, height: 2),
                               ],
                             ),
                           ),
@@ -117,7 +117,7 @@ class Disclosure extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          SizedBox(width: 50, height: 40),
+                          SizedBox(width: 30, height: 40),
                           SizedBox(
                             width: 24,
                             height: 24,

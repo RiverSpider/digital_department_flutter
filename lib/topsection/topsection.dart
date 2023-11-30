@@ -13,13 +13,10 @@ class TopSection extends StatelessWidget {
     return const Column(
       children: [
         SizedBox(
-          width: 375,
           height: 306,
           child: Stack(
             children: [
               Positioned(
-                left: 0,
-                top: 0,
                 child: Background(),
               ),
               Positioned(
@@ -29,17 +26,20 @@ class TopSection extends StatelessWidget {
                 child: Bar(),
               ),
               Positioned(
-                left: 0,
                 top: 250,
+                left: 0,
+                right: 0,
                 child: NavigationButtons(),
               ),
               Positioned(
-                left: 126,
+                left: 0,
+                right: 0,
                 top: 204,
                 child: Name(),
               ),
               Positioned(
-                left: 135,
+                left: 0,
+                right: 0,
                 top: 58,
                 child: Avatar(),
               ),

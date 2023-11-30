@@ -33,7 +33,7 @@ class Disclosure2 extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const SizedBox(width: 16, height: 40),
+                          const SizedBox(width: 20, height: 40),
                           Container(
                             clipBehavior: Clip.antiAlias,
                             decoration: const BoxDecoration(),
