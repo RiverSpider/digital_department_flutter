@@ -9,8 +9,6 @@ class Disclosure2 extends StatelessWidget {
     return Column(
       children: [
         Container(
-          width: 375,
-          height: 64,
           clipBehavior: Clip.antiAlias,
           decoration: BoxDecoration(color: Colors.white.withOpacity(0)),
           child: Column(
@@ -18,10 +16,10 @@ class Disclosure2 extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Container(width: 375, height: 12),
+              const SizedBox(width: 375, height: 12),
               Container(
                 clipBehavior: Clip.antiAlias,
-                decoration: BoxDecoration(),
+                decoration: const BoxDecoration(),
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -29,33 +27,31 @@ class Disclosure2 extends StatelessWidget {
                   children: [
                     Container(
                       clipBehavior: Clip.antiAlias,
-                      decoration: BoxDecoration(),
+                      decoration: const BoxDecoration(),
                       child: Row(
                         mainAxisSize: MainAxisSize.min,
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Container(width: 16, height: 40),
+                          const SizedBox(width: 16, height: 40),
                           Container(
                             clipBehavior: Clip.antiAlias,
-                            decoration: BoxDecoration(),
+                            decoration: const BoxDecoration(),
                             child: Column(
                               mainAxisSize: MainAxisSize.min,
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
-                                Container(width: 36, height: 2),
-                                Container(
+                                const SizedBox(width: 36, height: 2),
+                                SizedBox(
                                   width: 36,
                                   height: 36,
                                   child: Stack(
                                     children: [
                                       Positioned(
-                                        left: 4,
-                                        top: 8.41,
                                         child: Container(
-                                          width: 27,
-                                          height: 19.18,
+                                          width: 36,
+                                          height: 36,
                                           decoration: BoxDecoration(
                                             image: DecorationImage(
                                               image: AssetImage(image),
@@ -67,12 +63,12 @@ class Disclosure2 extends StatelessWidget {
                                     ],
                                   ),
                                 ),
-                                Container(width: 36, height: 2),
+                                const SizedBox(width: 36, height: 2),
                               ],
                             ),
                           ),
-                          Container(width: 12, height: 40),
-                          Container(
+                          const SizedBox(width: 12, height: 40),
+                          SizedBox(
                             width: 263,
                             child: Column(
                               mainAxisSize: MainAxisSize.min,
@@ -80,15 +76,14 @@ class Disclosure2 extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 SizedBox(
-                                  width: double.infinity,
+                                  width: 180,
                                   child: Text(
                                     title,
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                       color: Colors.black,
                                       fontSize: 16,
                                       fontFamily: 'SF Pro Text',
                                       fontWeight: FontWeight.w500,
-                                      height: 0.08,
                                       letterSpacing: -0.40,
                                     ),
                                   ),
@@ -101,30 +96,37 @@ class Disclosure2 extends StatelessWidget {
                     ),
                     Container(
                       clipBehavior: Clip.antiAlias,
-                      decoration: BoxDecoration(),
-                      child: Row(
+                      decoration: const BoxDecoration(),
+                      child: const Row(
                         mainAxisSize: MainAxisSize.min,
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Container(width: 16, height: 40),
-                          Container(
+                          SizedBox(width: 20, height: 40),
+                          SizedBox(
                             width: 24,
                             height: 24,
                             child: Stack(children: [
-                              Icon(
-                              Icons.arrow_forward_ios,
-                            ),
-                                ]),
+                              Positioned(
+                                top: 10,
+                                left: 10,
+                                child:
+                                Icon(
+                                  Icons.arrow_forward_ios,
+                                  size: 16,
+                                ),
+                              )
+
+                            ]),
                           ),
-                          Container(width: 8, height: 40),
+                          SizedBox(width: 8, height: 40),
                         ],
                       ),
                     ),
                   ],
                 ),
               ),
-              Container(width: 375, height: 12),
+              const SizedBox(width: 375, height: 12),
             ],
           ),
         ),

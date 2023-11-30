@@ -1,3 +1,4 @@
+import 'package:digital_department_flutter/mainsection/fill.dart';
 import 'package:digital_department_flutter/mainsection/sectionheader.dart';
 import 'package:flutter/material.dart';
 
@@ -26,6 +27,8 @@ class MainSection extends StatelessWidget {
                 SectionHeader(title: 'У вас подключено', description: 'Подписки, автоплатежи и сервисы на которые вы подписались'),
                   SizedBox(height: 20),
                   Disclosure(title: 'Изменить суточный лимит', description: 'На платежи и переводы', image: "images/speed.png"),
+                  Disclosure2(title: 'Информация о тарифах и лимитах', image: "images/arrowright.png"),
+                  Fill(title: 'Еда')
   
               ],
               ),

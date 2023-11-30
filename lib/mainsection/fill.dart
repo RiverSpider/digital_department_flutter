@@ -10,7 +10,7 @@ class Fill extends StatelessWidget {
       children: [
         Container(
           width: 49,
-          height: 32,
+          height: 35,
           clipBehavior: Clip.antiAlias,
           decoration: ShapeDecoration(
             color: Colors.black.withOpacity(0.07999999821186066),
@@ -23,10 +23,10 @@ class Fill extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Container(width: 34, height: 7),
+              const SizedBox(width: 34, height: 10),
               Container(
                 clipBehavior: Clip.antiAlias,
-                decoration: BoxDecoration(),
+                decoration: const BoxDecoration(),
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -34,16 +34,16 @@ class Fill extends StatelessWidget {
                   children: [
                     Container(
                       clipBehavior: Clip.antiAlias,
-                      decoration: BoxDecoration(),
+                      decoration: const BoxDecoration(),
                       child: Row(
                         mainAxisSize: MainAxisSize.min,
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          Container(width: 12, height: 18),
+                          const SizedBox(width: 12, height: 18),
                           Text(
                             title,
-                            style: TextStyle(
+                            style: const TextStyle(
                               color: Colors.black,
                               fontSize: 14,
                               fontFamily: 'SF Pro Text',
@@ -55,20 +55,18 @@ class Fill extends StatelessWidget {
                         ],
                       ),
                     ),
-                    Container(
-                      child: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Container(width: 12, height: 18),
-                        ],
-                      ),
+                    const Row(
+                      mainAxisSize: MainAxisSize.min,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        SizedBox(width: 12, height: 18),
+                      ],
                     ),
                   ],
                 ),
               ),
-              Container(width: 34, height: 7),
+              const SizedBox(width: 34, height: 7),
             ],
           ),
         ),

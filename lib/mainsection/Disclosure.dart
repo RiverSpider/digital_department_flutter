@@ -50,11 +50,9 @@ class Disclosure extends StatelessWidget {
                                   child: Stack(
                                     children: [
                                       Positioned(
-                                        left: 5,
-                                        top: 6.92,
                                         child: Container(
-                                          width: 26,
-                                          height: 23.10,
+                                          width: 36,
+                                          height: 36,
                                           decoration: BoxDecoration(
                                             image: DecorationImage(
                                               image: AssetImage(image),
@@ -119,36 +117,26 @@ class Disclosure extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          SizedBox(width: 16, height: 40),
+                          SizedBox(width: 50, height: 40),
                           SizedBox(
                             width: 24,
                             height: 24,
                             child: Stack(children: [
+                              Positioned(
+                                top: 10,
+                                child:
                               Icon(
-                              Icons.arrow_forward_ios,
+                                Icons.arrow_forward_ios,
                                 size: 16,
-                            ),
+                              ),
+                              )
+
                                 ]),
                           ),
                           SizedBox(width: 8, height: 40),
                         ],
                       ),
                     ),
-                  ],
-                ),
-              ),
-              const SizedBox(width: 375, height: 12),
-              SizedBox(
-                width: 311,
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Container(
-                      height: 2, // Высота полоски
-                      color: Colors.grey, // Цвет полоски
-                    )
                   ],
                 ),
               ),
