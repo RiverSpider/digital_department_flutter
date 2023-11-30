@@ -11,7 +11,7 @@ class SectionHeader extends StatelessWidget {
       children: [
         Container(
           clipBehavior: Clip.antiAlias,
-          decoration: BoxDecoration(),
+          decoration: const BoxDecoration(),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.start,
