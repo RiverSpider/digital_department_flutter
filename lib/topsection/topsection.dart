@@ -46,7 +46,6 @@ class TopSection extends StatelessWidget {
             ],
           ),
         ),
-        // Добавляем AppBar с отступом 44 пикселя от верха экрана
       ],
     );
   }
