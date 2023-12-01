@@ -1,5 +1,6 @@
 
-import 'package:digital_department_flutter/topsection/appbar.dart';
+import 'package:digital_department_flutter/mainsection/background.dart';
+import 'package:digital_department_flutter/topsection/NavigationButtons.dart';
 import 'package:digital_department_flutter/topsection/topsection.dart';
 import 'package:flutter/material.dart';
 
@@ -11,7 +12,6 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -27,8 +27,9 @@ class MyApp extends StatelessWidget {
             SliverList(
               delegate: SliverChildBuilderDelegate(
                     (BuildContext context, int index) {
-                  // Your code for MainSection goes here
-                  return const MainSection();
+                  return selectedTabIndex == 0
+                      ? MainSection()
+                      : Background();
                 },
                 childCount: 1,
               ),
