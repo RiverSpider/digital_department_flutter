@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Bar extends StatelessWidget {
-  const Bar({super.key});
+  const Bar({Key? key});
 
   @override
   Widget build(BuildContext context) {
@@ -10,20 +10,20 @@ class Bar extends StatelessWidget {
     return Container(
       width: 375,
       height: 88,
-      padding: const EdgeInsets.only(top: 44.0), // Устанавливаем отступ сверху
+      padding: const EdgeInsets.only(top: 44.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           IconButton(
             icon: Icon(Icons.close, color: iconColor),
             onPressed: () {
-              print('Крестик нажат');
+              print('Close button pressed');
             },
           ),
           IconButton(
             icon: Icon(Icons.exit_to_app, color: iconColor),
             onPressed: () {
-              print('Выход нажат');
+              print('Exit button pressed');
             },
           ),
         ],

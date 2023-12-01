@@ -7,7 +7,7 @@ class SectionHeader extends StatelessWidget {
   const SectionHeader({super.key, required this.title, required this.description});
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return Material(child: Column(
       children: [
         Container(
           clipBehavior: Clip.antiAlias,
@@ -52,7 +52,7 @@ class SectionHeader extends StatelessWidget {
                           SizedBox(
                             width: 343,
                             child: Text(
-                                description,
+                              description,
                               style: TextStyle(
                                 color: Colors.black.withOpacity(0.550000011920929),
                                 fontSize: 14,
@@ -73,6 +73,6 @@ class SectionHeader extends StatelessWidget {
           ),
         ),
       ],
-    );
+    ),);
   }
 }

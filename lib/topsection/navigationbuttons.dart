@@ -5,7 +5,7 @@ class NavigationButtons extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return Material(child: Column(
       children: [
         Container(
           width: 375,
@@ -62,6 +62,9 @@ class NavigationButtons extends StatelessWidget {
                                 ),
                               ),
                             ),
+                            SizedBox(
+
+                            ),
                           ],
                         ),
                       ),
@@ -117,6 +120,6 @@ class NavigationButtons extends StatelessWidget {
           ),
         ),
       ],
-    );
+    ),);
   }
 }

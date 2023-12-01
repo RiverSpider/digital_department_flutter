@@ -9,7 +9,7 @@ class Background extends StatelessWidget {
         Container(
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
-          decoration: const BoxDecoration(
+          decoration: BoxDecoration(
             color: Colors.white,
             boxShadow: [
               BoxShadow(

@@ -1,4 +1,5 @@
 
+import 'package:digital_department_flutter/topsection/appbar.dart';
 import 'package:digital_department_flutter/topsection/topsection.dart';
 import 'package:flutter/material.dart';
 
@@ -9,12 +10,32 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: MainSection(),
+    return MaterialApp(
+      home: Scaffold(
+        body: CustomScrollView(
+          slivers: [
+            const SliverAppBar(
+              expandedHeight: 306,
+              flexibleSpace: FlexibleSpaceBar(
+                background: TopSection(),
+              ),
+            ),
+            SliverList(
+              delegate: SliverChildBuilderDelegate(
+                    (BuildContext context, int index) {
+                  // Your code for MainSection goes here
+                  return const MainSection();
+                },
+                childCount: 1,
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
