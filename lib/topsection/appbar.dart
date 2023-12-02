@@ -1,16 +1,19 @@
 import 'package:flutter/material.dart';
 
+import '../Assets/Colors.dart';
+import '../Assets/Consts.dart';
+
 class Bar extends StatelessWidget {
   const Bar({Key? key});
 
   @override
   Widget build(BuildContext context) {
-    Color iconColor = const Color.fromRGBO(8, 166, 82, 1.0);
+    Color iconColor = ColorPalette.appbarcolor;
 
     return Container(
-      width: 375,
-      height: 88,
-      padding: const EdgeInsets.only(top: 44.0),
+      width: AppConstants.appbarcontainerwidht,
+      height: AppConstants.appbarcontainerheight,
+      padding: const EdgeInsets.only(top: AppConstants.appbarpadding),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

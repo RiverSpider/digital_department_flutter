@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../Assets/Consts.dart';
+import '../Assets/Fonts.dart';
+
 class Disclosure2 extends StatelessWidget {
   final String title;
   final String image;
@@ -10,13 +13,13 @@ class Disclosure2 extends StatelessWidget {
       children: [
         Container(
           clipBehavior: Clip.antiAlias,
-          decoration: BoxDecoration(color: Colors.white.withOpacity(0)),
+          decoration: BoxDecoration(color: Colors.white.withOpacity(AppConstants.zero)),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const SizedBox(width: 375, height: 12),
+              const SizedBox(height: AppConstants.disclosurepaddingheight),
               Container(
                 clipBehavior: Clip.antiAlias,
                 decoration: const BoxDecoration(),
@@ -33,7 +36,7 @@ class Disclosure2 extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const SizedBox(width: 20, height: 40),
+                          const SizedBox(width: AppConstants.disclosurepaddingwidthleft2),
                           Container(
                             clipBehavior: Clip.antiAlias,
                             decoration: const BoxDecoration(),
@@ -42,16 +45,14 @@ class Disclosure2 extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
-                                const SizedBox(width: 36, height: 2),
+                                const SizedBox(height: AppConstants.cardsubdespadding),
                                 SizedBox(
-                                  width: 36,
-                                  height: 36,
                                   child: Stack(
                                     children: [
                                       Positioned(
                                         child: Container(
-                                          width: 36,
-                                          height: 36,
+                                          width: AppConstants.cardimagesize,
+                                          height: AppConstants.cardimagesize,
                                           decoration: BoxDecoration(
                                             image: DecorationImage(
                                               image: AssetImage(image),
@@ -63,29 +64,23 @@ class Disclosure2 extends StatelessWidget {
                                     ],
                                   ),
                                 ),
-                                const SizedBox(width: 36, height: 2),
+                                const SizedBox(height: AppConstants.cardsubdespadding),
                               ],
                             ),
                           ),
-                          const SizedBox(width: 12, height: 40),
+                          const SizedBox(width: AppConstants.cardheaderpadding),
                           SizedBox(
-                            width: 263,
+                            width: AppConstants.disclosureheader,
                             child: Column(
                               mainAxisSize: MainAxisSize.min,
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 SizedBox(
-                                  width: 180,
+                                  width: AppConstants.disclosureheaderlimit,
                                   child: Text(
                                     title,
-                                    style: const TextStyle(
-                                      color: Colors.black,
-                                      fontSize: 16,
-                                      fontFamily: 'SF Pro Text',
-                                      fontWeight: FontWeight.w500,
-                                      letterSpacing: -0.40,
-                                    ),
+                                    style: FontThemes.disclosureheader,
                                   ),
                                 ),
                               ],
@@ -102,31 +97,30 @@ class Disclosure2 extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          SizedBox(width: 20, height: 40),
+                          SizedBox(width: AppConstants.disclosurepaddingwidthleft2),
                           SizedBox(
-                            width: 24,
-                            height: 24,
+                            width: AppConstants.disclosurearrowboxsize,
+                            height: AppConstants.disclosurearrowboxsize,
                             child: Stack(children: [
                               Positioned(
-                                top: 10,
-                                left: 10,
+                                top: AppConstants.disclosurearrowpadding,
+                                left: AppConstants.disclosurearrowpadding,
                                 child:
                                 Icon(
                                   Icons.arrow_forward_ios,
-                                  size: 16,
+                                  size: AppConstants.disclosurearrowsize,
                                 ),
                               )
 
                             ]),
                           ),
-                          SizedBox(width: 8, height: 40),
+                          SizedBox(width: AppConstants.disclosurearrowpaddingleft),
                         ],
                       ),
                     ),
                   ],
                 ),
               ),
-              const SizedBox(width: 375, height: 12),
             ],
           ),
         ),

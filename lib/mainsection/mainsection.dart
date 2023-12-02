@@ -2,6 +2,8 @@ import 'package:digital_department_flutter/mainsection/fill.dart';
 import 'package:digital_department_flutter/mainsection/sectionheader.dart';
 import 'package:flutter/material.dart';
 
+import '../Assets/Consts.dart';
+import '../Assets/Fonts.dart';
 import '../Assets/Strings.dart';
 import '../mainsection//background.dart';
 import 'Disclosure.dart';
@@ -13,62 +15,74 @@ class MainSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    List<Map<String, String>> cardDataList = [
+      {
+        'title': StringResources.sberprime,
+        'description': StringResources.sberprimeDate,
+        'subdiscription': StringResources.sberprimePrice,
+        'image': StringResources.sberprimepic,
+      },
+      {
+        'title': StringResources.transfer,
+        'description': StringResources.transferDate,
+        'subdiscription': StringResources.transferPrice,
+        'image': StringResources.percentbgpic,
+      },
+      {
+        'title': StringResources.transfer,
+        'description': StringResources.transferDate,
+        'subdiscription': StringResources.transferPrice,
+        'image': StringResources.percentbgpic,
+      },
+    ];
+
+    List<Map<String, String>> fillDataList = [
+      {'title': StringResources.food},
+      {'title': StringResources.selfdev},
+      {'title': StringResources.tech},
+      {'title': StringResources.home},
+      {'title': StringResources.leisure},
+      {'title': StringResources.selfcare},
+      {'title': StringResources.science},
+    ];
+
     return SingleChildScrollView(
       child: Column(
         children: [
           SizedBox(
             child: Stack(
               children: [
-                Positioned(
+                const Positioned(
                   child: Background(),
                 ),
                 Column(
                   children: [
-                    SectionHeader(title: StringResources.subheader, description: StringResources.subdescription),
+                    const SectionHeader(title: StringResources.subheader, description: StringResources.subdescription),
                     Material(
                       child: SizedBox(
-                        height: 130,
+                        height: AppConstants.cardheight,
                         child: ListView(
                           scrollDirection: Axis.horizontal,
                           shrinkWrap: true,
                           children: <Widget>[
-                            SizedBox(width: 35),
-                            InkWell(
-                              onTap: () {
-                                print('tapped');
-                              },
-                              child: Cards(
-                                title: StringResources.sberprime,
-                                description: StringResources.sberprimeDate,
-                                subdiscription: StringResources.sberprimePrice,
-                                image: StringResources.sberprimepic,
-                              ),
-                            ),
-                            SizedBox(width: 10),
-                            InkWell(
-                              onTap: () {
-                                print('tapped');
-                              },
-                              child: Cards(
-                                title: StringResources.transfer,
-                                description: StringResources.transferDate,
-                                subdiscription: StringResources.transferPrice,
-                                image: StringResources.percentbgpic,
-                              ),
-                            ),
-                            SizedBox(width: 10),
-                            InkWell(
-                              onTap: () {
-                                print('tapped');
-                              },
-                              child: Cards(
-                                title: StringResources.sberprime,
-                                description: StringResources.sberprimeDate,
-                                subdiscription: StringResources.sberprimePrice,
-                                image: StringResources.sberprimepic,
-                              ),
-                            ),
-                            SizedBox(width: 35),
+                            const SizedBox(width: AppConstants.cardimagesize),
+                            ...cardDataList.map((cardData) {
+                              return Row(children: [
+                                  InkWell(
+                                  onTap: () {
+                                print('Tapped');
+                                  },
+                                    child: Cards(
+                                    title: cardData['title'] ?? '',
+                                    description: cardData['description'] ?? '',
+                                    subdiscription: cardData['subdiscription'] ?? '',
+                                    image: cardData['image'] ?? '',
+                                    ),
+                                  ),
+                                FontThemes.spacersmall,
+                              ],);
+                            }).toList(),
+                            FontThemes.spacerlarge,
                           ],
                         ),
                       ),
@@ -76,8 +90,8 @@ class MainSection extends StatelessWidget {
                     Material(
                       child: Column(
                         children: [
-                          SizedBox(height: 20),
-                          SectionHeader(
+                          FontThemes.spacermedium,
+                          const SectionHeader(
                             title: StringResources.ratesheader,
                             description: StringResources.ratesdescription,
                           ),
@@ -85,39 +99,31 @@ class MainSection extends StatelessWidget {
                             onTap: () {
                               // Действие при нажатии на кнопку Disclosure
                             },
-                            child: Disclosure(
+                            child: const Disclosure(
                               title: StringResources.limitheader,
                               description: StringResources.limitdescription,
                               image: StringResources.speedpic,
                             ),
                           ),
-                          SizedBox(height: 10),
-                          Divider(
-                            color: Color(0xFFdcdcdc),
-                            height: 1,
-                            indent: 82,
-                          ),
+                          FontThemes.spacersmall,
+                          FontThemes.divider,
                           InkWell(
                             onTap: () {
                               // Действие при нажатии на кнопку Disclosure
                             },
-                            child: Disclosure(
+                            child: const Disclosure(
                               title: StringResources.transferheader,
                               description: StringResources.transferdescription,
                               image: StringResources.percentpic,
                             ),
                           ),
-                          SizedBox(height: 10),
-                          Divider(
-                            color: Color(0xFFdcdcdc),
-                            height: 1,
-                            indent: 82,
-                          ),
+                          FontThemes.spacersmall,
+                          FontThemes.divider,
                           InkWell(
                             onTap: () {
                               // Действие при нажатии на кнопку Disclosure2
                             },
-                            child: Disclosure2(
+                            child: const Disclosure2(
                               title: StringResources.infoheader,
                               image: StringResources.forwardpic,
                             ),
@@ -125,58 +131,23 @@ class MainSection extends StatelessWidget {
                         ],
                       ),
                     ),
-                    SectionHeader(title: StringResources.interestsheader, description: StringResources.interestsdescription),
+                    const SectionHeader(title: StringResources.interestsheader, description: StringResources.interestsdescription),
                     Material(
-                    child:
-                      Container(
-                        padding: EdgeInsets.only(left: 30, right: 60.0),
+                      child: Container(
+                        padding: const EdgeInsets.only(left: AppConstants.chipspacerleft, right: AppConstants.chipspacerright),
                         child: Wrap(
-                          spacing: 8.0,
-                          runSpacing: 8.0,
-                          children: [
-                            InkWell(
+                          spacing: AppConstants.chippadding,
+                          runSpacing: AppConstants.chippadding,
+                          children: fillDataList.map((fillData) {
+                            return InkWell(
                               onTap: () {
-                                print('Еда tapped');
+                                print('${fillData['title']} tapped');
                               },
-                              child: Fill(title: StringResources.food),
-                            ),
-                            InkWell(
-                              onTap: () {
-                                print('Саморазвитие tapped');
-                              },
-                              child: Fill(title: StringResources.selfdev),
-                            ),
-                            InkWell(
-                              onTap: () {
-                                print('Технологии tapped');
-                              },
-                              child: Fill(title: StringResources.tech),
-                            ),
-                            InkWell(
-                              onTap: () {
-                                print('Дом tapped');
-                              },
-                              child: Fill(title: StringResources.home),
-                            ),
-                            InkWell(
-                              onTap: () {
-                                print('Досуг tapped');
-                              },
-                              child: Fill(title: StringResources.leisure),
-                            ),
-                            InkWell(
-                              onTap: () {
-                                print('Забота о себе tapped');
-                              },
-                              child: Fill(title: StringResources.selfcare),
-                            ),
-                            InkWell(
-                              onTap: () {
-                                print('Наука tapped');
-                              },
-                              child: Fill(title: StringResources.science),
-                            ),
-                          ],
+                              child: Fill(
+                                title: fillData['title'] ?? '',
+                              ),
+                            );
+                          }).toList(),
                         ),
                       ),
                     ),

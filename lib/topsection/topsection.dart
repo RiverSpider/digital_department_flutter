@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../Assets/Consts.dart';
 import 'appbar.dart';
 import 'avatar.dart';
 import 'background.dart';
@@ -13,34 +14,34 @@ class TopSection extends StatelessWidget {
     return const Column(
       children: [
         SizedBox(
-          height: 306,
+          height: AppConstants.topsectionheight,
           child: Stack(
             children: [
               Positioned(
                 child: Background(),
               ),
               Positioned(
-                left: 0,
-                top: 0,
-                right: 0,
+                left: AppConstants.zero,
+                top: AppConstants.zero,
+                right: AppConstants.zero,
                 child: Bar(),
               ),
               Positioned(
-                top: 250,
-                left: 0,
-                right: 0,
+                top: AppConstants.navposition,
+                left: AppConstants.zero,
+                right: AppConstants.zero,
                 child: NavigationButtons(),
               ),
               Positioned(
-                left: 0,
-                right: 0,
-                top: 204,
+                left: AppConstants.zero,
+                right: AppConstants.zero,
+                top: AppConstants.nameposition,
                 child: Name(),
               ),
               Positioned(
-                left: 0,
-                right: 0,
-                top: 58,
+                left: AppConstants.zero,
+                right: AppConstants.zero,
+                top: AppConstants.avposition,
                 child: Avatar(),
               ),
             ],

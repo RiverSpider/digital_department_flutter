@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../Assets/Fonts.dart';
 import '../Assets/Strings.dart';
 
 class Name extends StatelessWidget {
@@ -7,18 +8,12 @@ class Name extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Material(child: Column(
+    return Material(child: Column(
       children: [
         Text(
           StringResources.username,
           textAlign: TextAlign.center,
-          style: TextStyle(
-            color: Colors.black,
-            fontSize: 24,
-            fontFamily: 'SF Pro Display',
-            fontWeight: FontWeight.w700,
-            height: 0.06,
-          ),
+          style: FontThemes.usernamestyle,
         ),
       ],
     ),);

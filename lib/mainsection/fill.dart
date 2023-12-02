@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../Assets/Consts.dart';
+import '../Assets/Fonts.dart';
+
 class Fill extends StatelessWidget {
   final String title;
 
@@ -10,18 +13,13 @@ class Fill extends StatelessWidget {
       children: [
         Container(
           clipBehavior: Clip.antiAlias,
-          decoration: ShapeDecoration(
-            color: Colors.black.withOpacity(0.07999999821186066),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(16),
-            ),
-          ),
+          decoration: FontThemes.chipshape,
           child: Column(
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              const SizedBox(width: 34, height: 10),
+              const SizedBox(height: AppConstants.disclosurearrowpaddingleft),
               Container(
                 clipBehavior: Clip.antiAlias,
                 decoration: const BoxDecoration(),
@@ -38,17 +36,10 @@ class Fill extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          const SizedBox(width: 12, height: 18),
+                          const SizedBox(width: AppConstants.cardheaderpadding, height: AppConstants.cardsubdesbottom),
                           Text(
                             title,
-                            style: const TextStyle(
-                              color: Colors.black,
-                              fontSize: 14,
-                              fontFamily: 'SF Pro Text',
-                              fontWeight: FontWeight.w500,
-                              height: 0.09,
-                              letterSpacing: -0.41,
-                            ),
+                            style: FontThemes.chiptext,
                           ),
                         ],
                       ),
@@ -58,13 +49,13 @@ class Fill extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        SizedBox(width: 12, height: 18),
+                        SizedBox(width: AppConstants.cardheaderpadding, height: AppConstants.cardsubdesbottom),
                       ],
                     ),
                   ],
                 ),
               ),
-              const SizedBox(width: 34, height: 7),
+              const SizedBox(height: AppConstants.chippadding),
             ],
           ),
         ),

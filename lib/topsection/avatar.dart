@@ -1,6 +1,9 @@
 import 'package:digital_department_flutter/Assets/Strings.dart';
 import 'package:flutter/material.dart';
 
+import '../Assets/Consts.dart';
+import '../Assets/Fonts.dart';
+
 class Avatar extends StatelessWidget {
   const Avatar({super.key});
 
@@ -9,23 +12,18 @@ class Avatar extends StatelessWidget {
     return Column(
       children: [
         Container(
-          width: 110,
-          height: 110,
+          width: AppConstants.avatarsize,
+          height: AppConstants.avatarsize,
           decoration: ShapeDecoration(
             image: const DecorationImage(
               image: AssetImage(StringResources.avatarpic),
               fit: BoxFit.fill,
             ),
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(38),
+              borderRadius: BorderRadius.circular(AppConstants.avatarcircle),
             ),
-            shadows: const [
-              BoxShadow(
-                color: Color(0x7A1D1D25),
-                blurRadius: 24,
-                offset: Offset(0, 16),
-                spreadRadius: -16,
-              )
+            shadows: [
+              FontThemes.avatarshadow
             ],
           ),
         ),

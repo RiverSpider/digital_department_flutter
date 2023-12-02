@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../Assets/Colors.dart';
+import '../Assets/Fonts.dart';
+
 class Background extends StatelessWidget {
   const Background({super.key});
 
@@ -9,15 +12,10 @@ class Background extends StatelessWidget {
         Container(
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
-          decoration: BoxDecoration(
-            color: Colors.white,
+          decoration: const BoxDecoration(
+            color: ColorPalette.backgroundcolormain,
             boxShadow: [
-              BoxShadow(
-                color: Color(0x14000014),
-                blurRadius: 16,
-                offset: Offset(0, 4),
-                spreadRadius: 0,
-              )
+              FontThemes.backgroundshadowtop
             ],
           ),
         );

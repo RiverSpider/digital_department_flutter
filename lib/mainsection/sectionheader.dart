@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../Assets/Consts.dart';
+import '../Assets/Fonts.dart';
+
 class SectionHeader extends StatelessWidget {
   final String title;
   final String description;
@@ -17,7 +20,6 @@ class SectionHeader extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const SizedBox(width: 375, height: 14),
               Container(
                 clipBehavior: Clip.antiAlias,
                 decoration: const BoxDecoration(),
@@ -26,7 +28,7 @@ class SectionHeader extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    const SizedBox(width: 16, height: 50),
+                    const SizedBox(width: AppConstants.cardimagepadding),
                     Container(
                       clipBehavior: Clip.antiAlias,
                       decoration: const BoxDecoration(),
@@ -36,30 +38,17 @@ class SectionHeader extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           SizedBox(
-                            width: 343,
                             child: Text(
                               title,
-                              style: const TextStyle(
-                                color: Colors.black,
-                                fontSize: 20,
-                                fontFamily: 'SF Pro Text',
-                                fontWeight: FontWeight.w700,
-                                letterSpacing: -0.70,
-                              ),
+                              style: FontThemes.sectiontitle,
                             ),
                           ),
-                          const SizedBox(height: 8),
+                          const SizedBox(height: AppConstants.sectionspacer),
                           SizedBox(
-                            width: 343,
+                            width: AppConstants.sectiontextlength,
                             child: Text(
                               description,
-                              style: TextStyle(
-                                color: Colors.black.withOpacity(0.550000011920929),
-                                fontSize: 14,
-                                fontFamily: 'SF Pro Text',
-                                fontWeight: FontWeight.w500,
-                                letterSpacing: -0.42,
-                              ),
+                              style: FontThemes.sectionsubtitle,
                             ),
                           ),
                         ],
@@ -68,7 +57,7 @@ class SectionHeader extends StatelessWidget {
                   ],
                 ),
               ),
-              const SizedBox(width: 375, height: 12),
+              const SizedBox(width: AppConstants.sectionboxwidth, height: AppConstants.sectionboxheight),
             ],
           ),
         ),

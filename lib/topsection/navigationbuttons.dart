@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../Assets/Colors.dart';
+import '../Assets/Consts.dart';
 import '../Assets/Strings.dart';
 import '../main.dart';
 import '../mainsection/background.dart';
@@ -15,23 +17,22 @@ class NavigationButtons extends StatefulWidget {
 }
 
 class _NavigationButtonsState extends State<NavigationButtons> {
-  MyApp index = new MyApp();
-
+  MyApp index = MyApp();
   @override
   Widget build(BuildContext context) {
     return Material(
       child: Column(
         children: [
           Container(
-            width: 375,
-            height: 56,
+            width: AppConstants.navcontainerwidth,
+            height: AppConstants.navcontainerheight,
             clipBehavior: Clip.antiAlias,
-            decoration: const BoxDecoration(color: Colors.white),
+            decoration: const BoxDecoration(color: ColorPalette.navbuttonsbackcolor),
             child: Stack(
               children: [
                 Positioned(
-                  left: 0,
-                  top: 0,
+                  left: AppConstants.zero,
+                  top: AppConstants.zero,
                   child: InkWell(
                     onTap: () {
                       setState(() {
@@ -39,19 +40,18 @@ class _NavigationButtonsState extends State<NavigationButtons> {
                       });
                     },
                     child: Container(
-                      height: 58,
                       clipBehavior: Clip.antiAlias,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
+                      decoration: const BoxDecoration(
+                        color: ColorPalette.navbuttonsbackcolor,
                       ),
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          const SizedBox(width: 187.50, height: 17),
+                          const SizedBox(width: AppConstants.navmiddle, height: AppConstants.navnameheight),
                           Container(
-                            height: 30,
+                            height: AppConstants.navlineboxheight,
                             clipBehavior: Clip.antiAlias,
                             decoration: const BoxDecoration(),
                             child: Column(
@@ -60,35 +60,36 @@ class _NavigationButtonsState extends State<NavigationButtons> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 SizedBox(
-                                  height: 20,
                                   child: Text(
                                     StringResources.profilepage,
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                       color: index.selectedTabIndex == 0
-                                          ? Colors.black
-                                          : Colors.grey,
-                                      fontSize: 16,
+                                          ? ColorPalette.navtextactcolor
+                                          : ColorPalette.navtextdiscolor,
+                                      // я решил здесь не выводить в фонты
+                                      // тк имеется кастомное условие на индекс
+                                      fontSize: AppConstants.navtextsize,
                                       fontFamily: 'SF Pro Text',
                                       fontWeight: FontWeight.w500,
-                                      letterSpacing: -0.40,
+                                      letterSpacing: AppConstants.navletterspaser,
                                     ),
                                   ),
                                 ),
                               ],
                             ),
                           ),
-                          Container(width: 187.50, height: 2, color: index.selectedTabIndex == 0
-                              ? Color(0xFF068441)
-                              : Colors.white,),
+                          Container(width: AppConstants.navmiddle, height: AppConstants.navlineheight, color: index.selectedTabIndex == 0
+                              ? ColorPalette.navlineactcolor
+                              : ColorPalette.navlinediscolor,),
                         ],
                       ),
                     ),
                   ),
                 ),
                 Positioned(
-                  left: 187.50,
-                  top: 0,
+                  left: AppConstants.navmiddle,
+                  top: AppConstants.zero,
                   child: InkWell(
                     onTap: () {
                       setState(() {
@@ -96,21 +97,20 @@ class _NavigationButtonsState extends State<NavigationButtons> {
                       });
                     },
                     child: Container(
-                      height: 58,
                       clipBehavior: Clip.antiAlias,
                       decoration: BoxDecoration(
                         color: index.selectedTabIndex == 1
-                            ? Colors.white
-                            : Colors.transparent,
+                            ? ColorPalette.backgroundcolormain
+                            : ColorPalette.backgroundcolormain,
                       ),
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          const SizedBox(width: 187.50, height: 17),
+                          const SizedBox(width: AppConstants.navmiddle, height: AppConstants.navnameheight),
                           Container(
-                            height: 30,
+                            height: AppConstants.navlineboxheight,
                             clipBehavior: Clip.antiAlias,
                             decoration: const BoxDecoration(),
                             child: Column(
@@ -119,27 +119,28 @@ class _NavigationButtonsState extends State<NavigationButtons> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 SizedBox(
-                                  height: 20,
                                   child: Text(
                                     StringResources.settingspage,
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                       color: index.selectedTabIndex == 1
-                                          ? Colors.black
-                                          : Colors.grey,
-                                      fontSize: 16,
+                                          ? ColorPalette.navtextactcolor
+                                          : ColorPalette.navtextdiscolor,
+                                      // я решил здесь не выводить в фонты
+                                      // тк имеется кастомное условие на индекс
+                                      fontSize: AppConstants.navtextsize,
                                       fontFamily: 'SF Pro Text',
                                       fontWeight: FontWeight.w500,
-                                      letterSpacing: -0.40,
+                                      letterSpacing: AppConstants.navletterspaser,
                                     ),
                                   ),
                                 ),
                               ],
                             ),
                           ),
-                          Container(width: 187.50, height: 2, color: index.selectedTabIndex == 1
-                              ? Color(0xFF068441)
-                              : Colors.white,),
+                          Container(width: AppConstants.navmiddle, height: AppConstants.navlineheight, color: index.selectedTabIndex == 1
+                              ? ColorPalette.navlineactcolor
+                              : ColorPalette.navlinediscolor,),
                         ],
                       ),
                     ),
