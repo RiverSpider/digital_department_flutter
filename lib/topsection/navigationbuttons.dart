@@ -1,17 +1,20 @@
 import 'package:flutter/material.dart';
 
+import '../main.dart';
+import '../mainsection/background.dart';
+import '../mainsection/mainsection.dart';
+
 class NavigationButtons extends StatefulWidget {
 
   const NavigationButtons({
     Key? key,
   }) : super(key: key);
-
   @override
   _NavigationButtonsState createState() => _NavigationButtonsState();
 }
 
 class _NavigationButtonsState extends State<NavigationButtons> {
-  int selectedTabIndex = 0;
+  MyApp index = new MyApp();
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +34,7 @@ class _NavigationButtonsState extends State<NavigationButtons> {
                   child: InkWell(
                     onTap: () {
                       setState(() {
-                        selectedTabIndex = 0;
+                        index.selectedTabIndex = 0;
                       });
                     },
                     child: Container(
@@ -61,7 +64,7 @@ class _NavigationButtonsState extends State<NavigationButtons> {
                                     'Профиль',
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
-                                      color: selectedTabIndex == 0
+                                      color: index.selectedTabIndex == 0
                                           ? Colors.black
                                           : Colors.grey,
                                       fontSize: 16,
@@ -74,7 +77,7 @@ class _NavigationButtonsState extends State<NavigationButtons> {
                               ],
                             ),
                           ),
-                          Container(width: 187.50, height: 2, color: selectedTabIndex == 0
+                          Container(width: 187.50, height: 2, color: index.selectedTabIndex == 0
                               ? Color(0xFF068441)
                               : Colors.white,),
                         ],
@@ -88,14 +91,14 @@ class _NavigationButtonsState extends State<NavigationButtons> {
                   child: InkWell(
                     onTap: () {
                       setState(() {
-                        selectedTabIndex = 1;
+                        index.selectedTabIndex = 1;
                       });
                     },
                     child: Container(
                       height: 58,
                       clipBehavior: Clip.antiAlias,
                       decoration: BoxDecoration(
-                        color: selectedTabIndex == 1
+                        color: index.selectedTabIndex == 1
                             ? Colors.white
                             : Colors.transparent,
                       ),
@@ -120,7 +123,7 @@ class _NavigationButtonsState extends State<NavigationButtons> {
                                     'Настройки',
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
-                                      color: selectedTabIndex == 1
+                                      color: index.selectedTabIndex == 1
                                           ? Colors.black
                                           : Colors.grey,
                                       fontSize: 16,
@@ -133,7 +136,7 @@ class _NavigationButtonsState extends State<NavigationButtons> {
                               ],
                             ),
                           ),
-                          Container(width: 187.50, height: 2, color: selectedTabIndex == 1
+                          Container(width: 187.50, height: 2, color: index.selectedTabIndex == 1
                               ? Color(0xFF068441)
                               : Colors.white,),
                         ],

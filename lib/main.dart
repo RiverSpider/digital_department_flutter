@@ -1,17 +1,23 @@
-
-import 'package:digital_department_flutter/mainsection/background.dart';
-import 'package:digital_department_flutter/topsection/NavigationButtons.dart';
-import 'package:digital_department_flutter/topsection/topsection.dart';
 import 'package:flutter/material.dart';
+import 'package:digital_department_flutter/mainsection/background.dart';
+import 'package:digital_department_flutter/topsection/topsection.dart';
 
 import 'mainsection/mainsection.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class MyApp extends StatefulWidget {
+  int selectedTabIndex = 0;
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  MyApp index = new MyApp();
+  get selectedTabIndex => index.selectedTabIndex;
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -27,9 +33,12 @@ class MyApp extends StatelessWidget {
             SliverList(
               delegate: SliverChildBuilderDelegate(
                     (BuildContext context, int index) {
-                  return selectedTabIndex == 0
-                      ? MainSection()
-                      : Background();
+                  return KeyedSubtree(
+                    key: UniqueKey(),
+                    child: selectedTabIndex == 0
+                        ? MainSection()
+                        : Background(),
+                  );
                 },
                 childCount: 1,
               ),
