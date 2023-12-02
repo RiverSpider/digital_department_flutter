@@ -5,7 +5,7 @@ import 'appbar.dart';
 import 'avatar.dart';
 import 'background.dart';
 import 'name.dart';
-import 'navigationbuttons.dart';
+import '../mainsection/navigationbuttons.dart';
 class TopSection extends StatelessWidget {
   const TopSection({Key? key}) : super(key: key);
 
@@ -25,12 +25,6 @@ class TopSection extends StatelessWidget {
                 top: AppConstants.zero,
                 right: AppConstants.zero,
                 child: Bar(),
-              ),
-              Positioned(
-                top: AppConstants.navposition,
-                left: AppConstants.zero,
-                right: AppConstants.zero,
-                child: NavigationButtons(),
               ),
               Positioned(
                 left: AppConstants.zero,

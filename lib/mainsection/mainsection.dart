@@ -9,6 +9,7 @@ import '../mainsection//background.dart';
 import 'Disclosure.dart';
 import 'Disclosure2.dart';
 import 'card.dart';
+import 'navigationbuttons.dart';
 
 class MainSection extends StatelessWidget {
   const MainSection({Key? key}) : super(key: key);
@@ -57,6 +58,7 @@ class MainSection extends StatelessWidget {
                 ),
                 Column(
                   children: [
+                    FontThemes.spacermedium,
                     const SectionHeader(title: StringResources.subheader, description: StringResources.subdescription),
                     Material(
                       child: SizedBox(
@@ -67,20 +69,28 @@ class MainSection extends StatelessWidget {
                           children: <Widget>[
                             const SizedBox(width: AppConstants.cardimagesize),
                             ...cardDataList.map((cardData) {
-                              return Row(children: [
-                                  InkWell(
-                                  onTap: () {
-                                print('Tapped');
-                                  },
-                                    child: Cards(
-                                    title: cardData['title'] ?? '',
-                                    description: cardData['description'] ?? '',
-                                    subdiscription: cardData['subdiscription'] ?? '',
-                                    image: cardData['image'] ?? '',
-                                    ),
+                              return Row(
+                                children: [
+                                  Stack(
+                                    children: [
+                                      Cards(
+                                        title: cardData['title'] ?? '',
+                                        description: cardData['description'] ?? '',
+                                        subdiscription: cardData['subdiscription'] ?? '',
+                                        image: cardData['image'] ?? '',
+                                      ),
+                                      Positioned.fill(
+                                        child: InkWell(
+                                          onTap: () {
+
+                                          },
+                                        ),
+                                      ),
+                                    ],
                                   ),
-                                FontThemes.spacersmall,
-                              ],);
+                                  FontThemes.spacersmall,
+                                ],
+                              );
                             }).toList(),
                             FontThemes.spacerlarge,
                           ],
@@ -95,38 +105,71 @@ class MainSection extends StatelessWidget {
                             title: StringResources.ratesheader,
                             description: StringResources.ratesdescription,
                           ),
-                          InkWell(
-                            onTap: () {
-                              // Действие при нажатии на кнопку Disclosure
-                            },
-                            child: const Disclosure(
-                              title: StringResources.limitheader,
-                              description: StringResources.limitdescription,
-                              image: StringResources.speedpic,
-                            ),
+                          Stack(
+                            children: [
+                              // Ваш виджет Disclosure
+                              const Disclosure(
+                                title: StringResources.limitheader,
+                                description: StringResources.limitdescription,
+                                image: StringResources.speedpic,
+                              ),
+                              // InkWell поверх виджета
+                              Positioned.fill(
+                                child: Material(
+                                  color: Colors.transparent,
+                                  child: InkWell(
+                                    onTap: () {
+                                      // Действие при нажатии на кнопку Disclosure
+                                    },
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
                           FontThemes.spacersmall,
                           FontThemes.divider,
-                          InkWell(
-                            onTap: () {
-                              // Действие при нажатии на кнопку Disclosure
-                            },
-                            child: const Disclosure(
-                              title: StringResources.transferheader,
-                              description: StringResources.transferdescription,
-                              image: StringResources.percentpic,
-                            ),
+                          Stack(
+                            children: [
+                              // Ваш виджет Disclosure
+                              const Disclosure(
+                                title: StringResources.transferheader,
+                                description: StringResources.transferdescription,
+                                image: StringResources.percentpic,
+                              ),
+                              // InkWell поверх виджета
+                              Positioned.fill(
+                                child: Material(
+                                  color: Colors.transparent,
+                                  child: InkWell(
+                                    onTap: () {
+                                      // Действие при нажатии на кнопку Disclosure
+                                    },
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
                           FontThemes.spacersmall,
                           FontThemes.divider,
-                          InkWell(
-                            onTap: () {
-                              // Действие при нажатии на кнопку Disclosure2
-                            },
-                            child: const Disclosure2(
-                              title: StringResources.infoheader,
-                              image: StringResources.forwardpic,
-                            ),
+                          Stack(
+                            children: [
+                              // Ваш виджет Disclosure
+                              const Disclosure2(
+                                title: StringResources.infoheader,
+                                image: StringResources.forwardpic,
+                              ),
+                              // InkWell поверх виджета
+                              Positioned.fill(
+                                child: Material(
+                                  color: Colors.transparent,
+                                  child: InkWell(
+                                    onTap: () {
+                                      // Действие при нажатии на кнопку Disclosure
+                                    },
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
                         ],
                       ),

@@ -11,11 +11,11 @@ class Disclosure extends StatelessWidget {
   const Disclosure({super.key, required this.title, required this.description, required this.image});
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return Material(child: Column(
       children: [
         Container(
           clipBehavior: Clip.antiAlias,
-          decoration: BoxDecoration(color: ColorPalette.backgroundcolormain),
+          decoration: BoxDecoration(),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.start,
@@ -114,13 +114,13 @@ class Disclosure extends StatelessWidget {
                               Positioned(
                                 top: AppConstants.disclosurearrowpadding,
                                 child:
-                              Icon(
-                                Icons.arrow_forward_ios,
-                                size: AppConstants.disclosurearrowsize,
-                              ),
+                                Icon(
+                                  Icons.arrow_forward_ios,
+                                  size: AppConstants.disclosurearrowsize,
+                                ),
                               )
 
-                                ]),
+                            ]),
                           ),
                           SizedBox(width: AppConstants.disclosurearrowpaddingleft),
                         ],
@@ -133,6 +133,6 @@ class Disclosure extends StatelessWidget {
           ),
         ),
       ],
-    );
+    ),);;
   }
 }

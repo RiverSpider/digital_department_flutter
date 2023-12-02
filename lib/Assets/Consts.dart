@@ -39,11 +39,12 @@ class AppConstants {
   static const double avatarsize = 110;
   static const double avatarcircle = 38;
 
-  static const double topsectionheight = 306;
+  static const double topsectionheight = 250;
   static const double navposition = 250;
   static const double nameposition = 204;
   static const double avposition = 58;
 
+  static const int numbertabs = 2;
   static const double navcontainerheight = 56;
   static const double navcontainerwidth = 375;
   static const double navmiddle = 187.50;
@@ -51,5 +52,5 @@ class AppConstants {
   static const double navlineboxheight = 30;
   static const double navtextsize = 16;
   static const double navletterspaser = -0.40;
-  static const double navlineheight = 2;
+  static const double navlineheight = 3;
 }

@@ -5,8 +5,8 @@ class StringResources {
   ///// Strings /////
   static const String username = 'Екатерина';
 
-  static const String profilepage = 'Профиль';
-  static const String settingspage = 'Настройки';
+  static const String profilepage = 'Профиль                          ';
+  static const String settingspage = 'Настройки                          ';
 
   static const String subheader = 'У вас подключено';
   static const String subdescription = 'Подписки, автоплатежи и сервисы на которые вы подписались';

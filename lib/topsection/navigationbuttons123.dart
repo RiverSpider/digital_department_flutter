@@ -17,6 +17,7 @@ class NavigationButtons extends StatefulWidget {
 }
 
 class _NavigationButtonsState extends State<NavigationButtons> {
+  int selectedTabIndex = 0;
   MyApp index = MyApp();
   @override
   Widget build(BuildContext context) {
@@ -36,7 +37,7 @@ class _NavigationButtonsState extends State<NavigationButtons> {
                   child: InkWell(
                     onTap: () {
                       setState(() {
-                        index.selectedTabIndex = 0;
+                        selectedTabIndex = 0;
                       });
                     },
                     child: Container(
@@ -64,7 +65,7 @@ class _NavigationButtonsState extends State<NavigationButtons> {
                                     StringResources.profilepage,
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
-                                      color: index.selectedTabIndex == 0
+                                      color: selectedTabIndex == 0
                                           ? ColorPalette.navtextactcolor
                                           : ColorPalette.navtextdiscolor,
                                       // я решил здесь не выводить в фонты
@@ -79,7 +80,7 @@ class _NavigationButtonsState extends State<NavigationButtons> {
                               ],
                             ),
                           ),
-                          Container(width: AppConstants.navmiddle, height: AppConstants.navlineheight, color: index.selectedTabIndex == 0
+                          Container(width: AppConstants.navmiddle, height: AppConstants.navlineheight, color: selectedTabIndex == 0
                               ? ColorPalette.navlineactcolor
                               : ColorPalette.navlinediscolor,),
                         ],
@@ -93,13 +94,13 @@ class _NavigationButtonsState extends State<NavigationButtons> {
                   child: InkWell(
                     onTap: () {
                       setState(() {
-                        index.selectedTabIndex = 1;
+                        selectedTabIndex = 1;
                       });
                     },
                     child: Container(
                       clipBehavior: Clip.antiAlias,
                       decoration: BoxDecoration(
-                        color: index.selectedTabIndex == 1
+                        color: selectedTabIndex == 1
                             ? ColorPalette.backgroundcolortop
                             : ColorPalette.backgroundcolortop,
                       ),
@@ -123,7 +124,7 @@ class _NavigationButtonsState extends State<NavigationButtons> {
                                     StringResources.settingspage,
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
-                                      color: index.selectedTabIndex == 1
+                                      color: selectedTabIndex == 1
                                           ? ColorPalette.navtextactcolor
                                           : ColorPalette.navtextdiscolor,
                                       // я решил здесь не выводить в фонты
@@ -138,7 +139,7 @@ class _NavigationButtonsState extends State<NavigationButtons> {
                               ],
                             ),
                           ),
-                          Container(width: AppConstants.navmiddle, height: AppConstants.navlineheight, color: index.selectedTabIndex == 1
+                          Container(width: AppConstants.navmiddle, height: AppConstants.navlineheight, color: selectedTabIndex == 1
                               ? ColorPalette.navlineactcolor
                               : ColorPalette.navlinediscolor,),
                         ],

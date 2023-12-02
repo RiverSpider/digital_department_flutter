@@ -109,7 +109,13 @@ class FontThemes {
     height: 0.06,
   );
 
-  static SizedBox spacersmall = const SizedBox(height: 10);
+  static TextStyle activetab = const TextStyle(
+    color: Colors.black,
+    fontSize: 16,
+    fontWeight: FontWeight.w500,
+  );
+
+  static SizedBox spacersmall = const SizedBox(height: 10, width: 10,);
   static SizedBox spacermedium = const SizedBox(height: 20);
   static SizedBox spacerlarge = const SizedBox(height: 35);
 
