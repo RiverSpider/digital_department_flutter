@@ -131,6 +131,7 @@ class MainSection extends StatelessWidget {
                         ],
                       ),
                     ),
+                    FontThemes.spacersmall,
                     const SectionHeader(title: StringResources.interestsheader, description: StringResources.interestsdescription),
                     Material(
                       child: Container(

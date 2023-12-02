@@ -13,7 +13,7 @@ class Background extends StatelessWidget {
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
           decoration: const BoxDecoration(
-            color: ColorPalette.backgroundcolormain,
+            color: ColorPalette.backgroundcolortop,
             boxShadow: [
               FontThemes.backgroundshadowtop
             ],

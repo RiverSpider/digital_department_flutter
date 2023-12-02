@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../Assets/Colors.dart';
 import '../Assets/Consts.dart';
 import '../Assets/Fonts.dart';
 
@@ -28,7 +29,7 @@ class SectionHeader extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    const SizedBox(width: AppConstants.cardimagepadding),
+                    Container(width: AppConstants.cardimagepadding, color: ColorPalette.backgroundcolormain),
                     Container(
                       clipBehavior: Clip.antiAlias,
                       decoration: const BoxDecoration(),

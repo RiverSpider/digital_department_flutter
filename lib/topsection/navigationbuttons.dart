@@ -100,8 +100,8 @@ class _NavigationButtonsState extends State<NavigationButtons> {
                       clipBehavior: Clip.antiAlias,
                       decoration: BoxDecoration(
                         color: index.selectedTabIndex == 1
-                            ? ColorPalette.backgroundcolormain
-                            : ColorPalette.backgroundcolormain,
+                            ? ColorPalette.backgroundcolortop
+                            : ColorPalette.backgroundcolortop,
                       ),
                       child: Column(
                         mainAxisSize: MainAxisSize.min,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../Assets/Colors.dart';
 import '../Assets/Consts.dart';
 import '../Assets/Fonts.dart';
 
@@ -14,7 +15,7 @@ class Disclosure extends StatelessWidget {
       children: [
         Container(
           clipBehavior: Clip.antiAlias,
-          decoration: BoxDecoration(color: Colors.white.withOpacity(AppConstants.zero)),
+          decoration: BoxDecoration(color: ColorPalette.backgroundcolormain),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.start,
