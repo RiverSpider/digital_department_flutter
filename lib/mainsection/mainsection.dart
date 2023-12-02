@@ -2,6 +2,7 @@ import 'package:digital_department_flutter/mainsection/fill.dart';
 import 'package:digital_department_flutter/mainsection/sectionheader.dart';
 import 'package:flutter/material.dart';
 
+import '../Assets/Strings.dart';
 import '../mainsection//background.dart';
 import 'Disclosure.dart';
 import 'Disclosure2.dart';
@@ -23,7 +24,7 @@ class MainSection extends StatelessWidget {
                 ),
                 Column(
                   children: [
-                    SectionHeader(title: 'У вас подключено', description: 'Подписки, автоплатежи и сервисы на которые вы подписались'),
+                    SectionHeader(title: StringResources.subheader, description: StringResources.subdescription),
                     Material(
                       child: SizedBox(
                         height: 130,
@@ -37,10 +38,10 @@ class MainSection extends StatelessWidget {
                                 print('tapped');
                               },
                               child: Cards(
-                                title: 'СберПрайм',
-                                description: 'Платёж 9 июля',
-                                subdiscription: '199 ₽ в месяц',
-                                image: "images/sberprime.png",
+                                title: StringResources.sberprime,
+                                description: StringResources.sberprimeDate,
+                                subdiscription: StringResources.sberprimePrice,
+                                image: StringResources.sberprimepic,
                               ),
                             ),
                             SizedBox(width: 10),
@@ -49,10 +50,10 @@ class MainSection extends StatelessWidget {
                                 print('tapped');
                               },
                               child: Cards(
-                                title: 'Переводы',
-                                description: 'Автопродление 21 августа',
-                                subdiscription: '199 ₽ в месяц',
-                                image: "images/percentbg.png",
+                                title: StringResources.transfer,
+                                description: StringResources.transferDate,
+                                subdiscription: StringResources.transferPrice,
+                                image: StringResources.percentbgpic,
                               ),
                             ),
                             SizedBox(width: 10),
@@ -61,10 +62,10 @@ class MainSection extends StatelessWidget {
                                 print('tapped');
                               },
                               child: Cards(
-                                title: 'СберПрайм',
-                                description: 'Платёж 9 июля',
-                                subdiscription: '199 ₽ в месяц',
-                                image: "images/sberprime.png",
+                                title: StringResources.sberprime,
+                                description: StringResources.sberprimeDate,
+                                subdiscription: StringResources.sberprimePrice,
+                                image: StringResources.sberprimepic,
                               ),
                             ),
                             SizedBox(width: 35),
@@ -77,17 +78,17 @@ class MainSection extends StatelessWidget {
                         children: [
                           SizedBox(height: 20),
                           SectionHeader(
-                            title: 'Тарифы и лимиты',
-                            description: 'Для операций в Сбербанк Онлайн',
+                            title: StringResources.ratesheader,
+                            description: StringResources.ratesdescription,
                           ),
                           InkWell(
                             onTap: () {
                               // Действие при нажатии на кнопку Disclosure
                             },
                             child: Disclosure(
-                              title: 'Изменить суточный лимит',
-                              description: 'На платежи и переводы',
-                              image: "images/speed.png",
+                              title: StringResources.limitheader,
+                              description: StringResources.limitdescription,
+                              image: StringResources.speedpic,
                             ),
                           ),
                           SizedBox(height: 10),
@@ -101,9 +102,9 @@ class MainSection extends StatelessWidget {
                               // Действие при нажатии на кнопку Disclosure
                             },
                             child: Disclosure(
-                              title: 'Переводы без комиссии',
-                              description: 'Показать остаток в этом месяце',
-                              image: "images/percent.png",
+                              title: StringResources.transferheader,
+                              description: StringResources.transferdescription,
+                              image: StringResources.percentpic,
                             ),
                           ),
                           SizedBox(height: 10),
@@ -117,14 +118,14 @@ class MainSection extends StatelessWidget {
                               // Действие при нажатии на кнопку Disclosure2
                             },
                             child: Disclosure2(
-                              title: 'Информация о тарифах и лимитах',
-                              image: "images/arrowright.png",
+                              title: StringResources.infoheader,
+                              image: StringResources.forwardpic,
                             ),
                           ),
                         ],
                       ),
                     ),
-                    SectionHeader(title: 'Интересы', description: 'Мы подбираем истории и предложения по темам, которые вам нравятся'),
+                    SectionHeader(title: StringResources.interestsheader, description: StringResources.interestsdescription),
                     Material(
                     child:
                       Container(
@@ -135,52 +136,45 @@ class MainSection extends StatelessWidget {
                           children: [
                             InkWell(
                               onTap: () {
-                                // Действие при нажатии на 'Еда'
                                 print('Еда tapped');
                               },
-                              child: Fill(title: 'Еда'),
+                              child: Fill(title: StringResources.food),
                             ),
                             InkWell(
                               onTap: () {
-                                // Действие при нажатии на 'Саморазвитие'
                                 print('Саморазвитие tapped');
                               },
-                              child: Fill(title: 'Саморазвитие'),
+                              child: Fill(title: StringResources.selfdev),
                             ),
                             InkWell(
                               onTap: () {
-                                // Действие при нажатии на 'Технологии'
                                 print('Технологии tapped');
                               },
-                              child: Fill(title: 'Технологии'),
+                              child: Fill(title: StringResources.tech),
                             ),
                             InkWell(
                               onTap: () {
-                                // Действие при нажатии на 'Дом'
                                 print('Дом tapped');
                               },
-                              child: Fill(title: 'Дом'),
+                              child: Fill(title: StringResources.home),
                             ),
                             InkWell(
                               onTap: () {
-                                // Действие при нажатии на 'Досуг'
                                 print('Досуг tapped');
                               },
-                              child: Fill(title: 'Досуг'),
+                              child: Fill(title: StringResources.leisure),
                             ),
                             InkWell(
                               onTap: () {
-                                // Действие при нажатии на 'Забота о себе'
                                 print('Забота о себе tapped');
                               },
-                              child: Fill(title: 'Забота о себе'),
+                              child: Fill(title: StringResources.selfcare),
                             ),
                             InkWell(
                               onTap: () {
-                                // Действие при нажатии на 'Наука'
                                 print('Наука tapped');
                               },
-                              child: Fill(title: 'Наука'),
+                              child: Fill(title: StringResources.science),
                             ),
                           ],
                         ),

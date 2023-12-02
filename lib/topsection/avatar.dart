@@ -1,3 +1,4 @@
+import 'package:digital_department_flutter/Assets/Strings.dart';
 import 'package:flutter/material.dart';
 
 class Avatar extends StatelessWidget {
@@ -12,7 +13,7 @@ class Avatar extends StatelessWidget {
           height: 110,
           decoration: ShapeDecoration(
             image: const DecorationImage(
-              image: AssetImage("images/avatar.png"),
+              image: AssetImage(StringResources.avatarpic),
               fit: BoxFit.fill,
             ),
             shape: RoundedRectangleBorder(

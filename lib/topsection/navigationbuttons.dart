@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../Assets/Strings.dart';
 import '../main.dart';
 import '../mainsection/background.dart';
 import '../mainsection/mainsection.dart';
@@ -61,7 +62,7 @@ class _NavigationButtonsState extends State<NavigationButtons> {
                                 SizedBox(
                                   height: 20,
                                   child: Text(
-                                    'Профиль',
+                                    StringResources.profilepage,
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                       color: index.selectedTabIndex == 0
@@ -120,7 +121,7 @@ class _NavigationButtonsState extends State<NavigationButtons> {
                                 SizedBox(
                                   height: 20,
                                   child: Text(
-                                    'Настройки',
+                                    StringResources.settingspage,
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                       color: index.selectedTabIndex == 1

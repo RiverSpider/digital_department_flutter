@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../Assets/Strings.dart';
+
 class Name extends StatelessWidget {
   const Name({super.key});
 
@@ -8,7 +10,7 @@ class Name extends StatelessWidget {
     return const Material(child: Column(
       children: [
         Text(
-          'Екатерина',
+          StringResources.username,
           textAlign: TextAlign.center,
           style: TextStyle(
             color: Colors.black,
